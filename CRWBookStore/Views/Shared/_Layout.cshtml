@@ -25,9 +25,18 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+
                 </div>
-                <partial name = "_loginPartial"/>
+                <div class = "navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style = "margin-left:50%;">
+                    <ul class="navbar-nav flex-grow-1">                            
+                            <li class="nav-item">
+                                <a href="/Cart?returnUrl=%2FInventory%2FBrowseBooks" class="nav-link text-dark"  >Cart</a>
+                            </li>
+                    </ul>
+                </div>
+                <partial name = "_loginPartial"/>                
             </div>
+            
         </nav>
     </header>
     <div class="container">
