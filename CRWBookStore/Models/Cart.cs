@@ -8,7 +8,7 @@ namespace CRWBookStore.Models
     public class Cart
     {
         public List<CartLine> Lines { get; set; } = new List<CartLine>();
-        public void AddItem(BookModel book, int quantity)
+        public virtual void AddItem(BookModel book, int quantity)
         {
             CartLine line = Lines
             .Where(p => p.book.Book_id == book.Book_id)
@@ -26,17 +26,19 @@ namespace CRWBookStore.Models
                 line.Quantity += quantity;
             }
         }
-        public void RemoveLine(BookModel book) =>
+        public virtual void RemoveLine(BookModel book) =>
         Lines.RemoveAll(l => l.book.Book_id == book.Book_id);
         public decimal ComputeTotalValue() =>
-        Lines.Sum(e => e.book.Book_id * e.Quantity);
-        public void Clear() => Lines.Clear();
-    } 
+        Lines.Sum(e => e.book.price * e.Quantity);
 
-public class CartLine
+        public virtual void Clear() => Lines.Clear();
+
+    }
+
+    public class CartLine
     {
         [Key]
-        public int customer_id { get; set; }    
+        public int customer_id { get; set; }
         public BookModel book { get; set; }
         public int Quantity { get; set; }
 
