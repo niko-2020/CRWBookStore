@@ -26,9 +26,8 @@ namespace CRWBookStore.Controllers
             if (ModelState.IsValid)
             {
                 order.Lines = cart.Lines.ToArray();
-                repository.SaveOrder(order);
                 cart.Clear();
-                return RedirectToPage("/Completed", new { orderId = order.OrderID });
+                return RedirectToPage("/ThankYou", new { orderId = order.OrderID });
             }
             else
             {

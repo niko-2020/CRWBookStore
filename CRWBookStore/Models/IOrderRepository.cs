@@ -8,6 +8,5 @@ namespace CRWBookStore.Models
     {
 
         IQueryable<Order> Orders { get; }
-        void SaveOrder(Order order);
     }
 }
