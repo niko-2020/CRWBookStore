@@ -28,8 +28,8 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Inventory" asp-action="BrowseBooks">BOOK</a>
                         </li>
-                        <li>
-
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Inventory" asp-action="ThankYou">Thanks</a>
                         </li>
                         <li>
 
@@ -44,8 +44,12 @@
                             <li class="nav-item">
                                 <a href="/Cart?returnUrl=%2FInventory%2FBrowseBooks" class="nav-link text-dark"  >Cart</a>
                             </li>
+                            <div class="col-6 text-right">
+                                <vc:cart-summary />
+                                
+                            </div>
                     </ul>
-                </div>
+                    </div>
                 <partial name = "_loginPartial"/>                
             </div>
         </nav>

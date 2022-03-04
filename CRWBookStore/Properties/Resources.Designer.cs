@@ -19,7 +19,7 @@ namespace CRWBookStore.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,7 +61,7 @@ namespace CRWBookStore.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Server= (LocalDb)\\MSSQLLocalDb;Database=gravity_books; Integrated Security = True;.
+        ///   Looks up a localized string similar to Server= DESKTOP-4MHOVL2;Database=gravity_books; Integrated Security = True;Trusted_Connection=True.
         /// </summary>
         internal static string DefaultConnection {
             get {
