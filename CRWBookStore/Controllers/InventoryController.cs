@@ -26,6 +26,11 @@ namespace CRWBookStore.Controllers
         {
             return View();
         }
+
+        public IActionResult ThankYou()
+        {
+            return View();
+        }
         [HttpPost]
 
         public async Task<IActionResult> Login(int Customer_id)

@@ -34,5 +34,10 @@ namespace CRWBookStore.Controllers
                 return View();
             }
         }
+        public IActionResult PaymentInfo()
+        {
+            return View();
+        }
+
     }
 }
