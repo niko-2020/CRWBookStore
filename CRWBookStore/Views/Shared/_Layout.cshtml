@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] CRW BOOK STORE</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />  
-    <link rel="icon" href="~/book-icon-138-Windows.ico"/>
+    <link rel="icon" href="~/favicon.ico" />  
 
 </head>
 <body>
@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CRW BOOKSTORE</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><strong>CRW BOOKSTORE</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,14 +28,8 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Inventory" asp-action="BrowseBooks">BOOK</a>
                         </li>
-                        <li>
-
-                        </li>
-                        <li>
-
-                        </li>
-
-                        
+                         
+                                               
                     </ul>
                 </div>
 
@@ -44,8 +38,12 @@
                             <li class="nav-item">
                                 <a href="/Cart?returnUrl=%2FInventory%2FBrowseBooks" class="nav-link text-dark"  >Cart</a>
                             </li>
+                            <div class="col-6 text-right">
+                                <vc:cart-summary />
+                                
+                            </div>
                     </ul>
-                </div>
+                    </div>
                 <partial name = "_loginPartial"/>                
             </div>
         </nav>

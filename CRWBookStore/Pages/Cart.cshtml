@@ -9,12 +9,12 @@
     <title>@ViewData["Title"] CRW BOOK STORE</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="icon" href="~/book-icon-138-Windows.ico"/>
+    <link rel="icon" href="favicon.ico"/>
 
 </head>
 
 
-<h2>Your Shopping Cart</h2>
+<h5>Your Shopping Cart</h5>
 <table class="table table-bordered table-striped">
      <thead>
          <tr>
@@ -60,7 +60,7 @@
 </table>
 <div class="text-center">
     <a class="btn btn-primary" href="@Model.ReturnUrl">Continue shopping</a>
-    <a class="btn btn-primary" asp-action="Checkout" asp-controller="Order">
+    <a class="btn btn-primary" asp-action="PaymentInfo" asp-controller="Order">
         Checkout
     </a>
 </div>

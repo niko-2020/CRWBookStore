@@ -30,6 +30,7 @@ namespace CRWBookStore
             services.AddControllersWithViews();
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IStoreRepository, EFStoreRepository>();
+            services.AddScoped<IOrderRepository, EFOrderRepository>();
             services.AddRazorPages();
             services.AddDistributedMemoryCache();
             services.AddSession();
@@ -41,7 +42,11 @@ namespace CRWBookStore
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseDeveloperExceptionPage();
+            app.UseStatusCodePages();
+            app.UseStaticFiles();
             app.UseSession();
+            app.UseRouting();
             if (env.IsDevelopment())
             {
                 app.UseAuthentication();
