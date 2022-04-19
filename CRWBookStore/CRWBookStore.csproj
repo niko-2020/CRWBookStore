@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>CRWBookStore.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
