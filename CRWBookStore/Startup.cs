@@ -36,12 +36,19 @@ namespace CRWBookStore
             services.AddSession();
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            //AddControllers(); and AddMvc(option => option.EnableEndpointRouting = false); is for attribute routing
+            services.AddControllers();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
         }
     
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //this is for attribute routing:
+            /*app.UseMvcWithDefaultRoute();
+            app.UseMvc();*/
+
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
@@ -64,7 +71,9 @@ namespace CRWBookStore
             app.UseRouting();
 
             app.UseAuthorization();
+            //app.UseMvcWithDefaultRoute();
 
+            //Convention-based Routing
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -72,6 +81,15 @@ namespace CRWBookStore
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            /*app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                            "default",
+                            "{controller=Home}/{action=index}/{id?}");
+            });*/
+
+
         }
-    }
+}
 }

@@ -10,14 +10,24 @@ using System.Threading.Tasks;
 
 namespace CRWBookStore.Controllers
 {
+    //[Route("Home")]
     public class HomeController : Controller
     {
-        
+        //[] is for attribut routing.
+        /*[Route("")]
+        [Route("Index")]
+        [Route("~/")]*/
         public IActionResult Index()
         {
             return View();
         }
 
+        /*[Route("Index/privacy")]
+        [Route("~/Privacy")]*/
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
     }
 }
