@@ -14,9 +14,13 @@ namespace CRWBookStore.Controllers
         {
             _db = db;
         }
-        /*public async Task<IActionResult> addToCart(int customer_id,int book_id,int count)
+        public IActionResult ShoppingCart()
         {
-            customer_id.
-        }*/
+            return View();
+        }
+        public async Task<IActionResult> AddToCart(int customer_id,int book_id,int count)
+        {
+            return View();
+        }
     }
 }
